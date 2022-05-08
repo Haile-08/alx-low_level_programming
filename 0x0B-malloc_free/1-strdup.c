@@ -5,12 +5,12 @@
 
 /**
  * _strdup - returns a pointer to a newly allocated space in memory
- * 	, which contains a copy of the string given as a parameter.
+ *	, which contains a copy of the string given as a parameter.
  * @str: the string passed
  *
  * Return: if str == NULL return null ,
- * 	or return the pointer and if insufficent memory return
- * 	null,
+ *	or return the pointer and if insufficent memory return
+ *	null,
  */
 
 char *_strdup(char *str)
@@ -25,7 +25,7 @@ char *_strdup(char *str)
 		return (NULL);
 	len = strlen(*str);
 	i = 0;
-	while(i < len)
+	while (i < len)
 	{
 		t[i] = *str;
 	}
