@@ -14,14 +14,12 @@ void print_times_table(int n)
 
 	if(n > 15 && n < 0)
 	{
-		printf("");
+
 	}
 	else
 	{
 		for (i = 0; i < n; i++)
 		{
-			printf("%d, ", 0);
-
 			for(j = 0; j < n; j++)
 			{
 				times = i * j;
