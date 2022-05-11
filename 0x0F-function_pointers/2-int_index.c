@@ -9,8 +9,8 @@
  * @cmp: pointer to the function
  *
  * Return: index of the first element
- * 	if no match return -1
- * 	size<=0 return -1
+ *		if no match return -1
+ *		size<=0 return -1
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
@@ -23,7 +23,6 @@ int int_index(int *array, int size, int (*cmp)(int))
 		{
 			if (cmp(array[i]) != 0)
 				return (i);
-			
 		}
 	}
 
