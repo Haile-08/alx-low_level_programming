@@ -22,7 +22,7 @@ int main(void)
 		}
 		++n;
 	}
-	putchar('$');
+	putchar('\n');
 
 	return (0);
 }
