@@ -26,7 +26,7 @@ int main(void)
 			n = n / d;
 			if (n == 1)
 			{
-				printf("%ld",maxpf);
+				printf("%ld", maxpf);
 				printf("\n");
 				break;
 			}
