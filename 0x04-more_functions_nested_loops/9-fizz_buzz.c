@@ -4,11 +4,8 @@
  * main - Entry point
  *
  * Description: print 1 to 100 but for numbers that
- *		are multiple of 3 print Fizz and
- *		number that are multiple of 5 print
- *		Buzz and for multiple of both 3 and 5 print
- *		FizzBuzz
- * 
+ *		speacial pattern
+ *
  * Return: Always 0 (Success)
  */
 
@@ -34,7 +31,7 @@ int main(void)
 			}
 			else
 			{
-				printf("%d",i);
+				printf("%d", i);
 			}
 		}
 		if (i < 100)
@@ -44,6 +41,5 @@ int main(void)
 		i++;
 	}
 	printf("\n");
-	
 	return (0);
 }
