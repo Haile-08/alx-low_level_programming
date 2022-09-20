@@ -14,13 +14,20 @@ void print_rev(char *s)
 	int l = 1;
 	int i;
 
-	while (*(s + l) != '\0')
+	if (*(s + 1) == '\0')
 	{
-		l = l + 1;
+		printf(" ");
 	}
-	for (i = 0; i <= l; l--)
+	else
 	{
-		printf("%c", *(s + l));
+		while (*(s + l) != '\0')
+		{
+			l = l + 1;
+		}
+		for (i = 0; i <= l; l--)
+		{
+			printf("%c", *(s + l));
+		}
 	}
 	printf("\n");
 }
