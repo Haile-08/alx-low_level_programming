@@ -2,32 +2,26 @@
 
 /**
  * print_rev - print reverse
- * @s: input string pointer
+ * @s: string pointer value
  *
- * Description: print string in reverse
+ * Description: print a string in reverse
  *
  * Return: null
  */
 
 void print_rev(char *s)
 {
-	int l = 1;
-	int i;
+	int i = 0;
 
-	if (*(s + 1) == '\0')
+	while (s[i] != '\0')
 	{
-		printf("%c",'\0');
+		i++;
 	}
-	else
+
+	while (i >= 0)
 	{
-		while (*(s + l) != '\0')
-		{
-			l = l + 1;
-		}
-		for (i = 0; i <= l; l--)
-		{
-			printf("%c", *(s + l));
-		}
+		_putchar(s[i]);
+		--i;
 	}
-	printf("\n");
+	_putchar('\n');
 }
