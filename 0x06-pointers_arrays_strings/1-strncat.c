@@ -13,31 +13,18 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	int i, l, o;
+	int i, l;
 
 	for (i = 0; *(dest + i) != '\0'; ++i)
 	{
 		*(dest + i) = *(dest + i);
 	}
-
-	for (l = 0; *(src + l) != '\0'; ++l)
-		;
-	if (n < l)
+	for (l = 0;i < n && *(src + l) != '\0'; ++l)
 	{
-		for (o = 0; o < n; ++o)
-		{
-			*(dest + i) = *(src + o);
-			++i;
-		}
+		*(dest + i) = *(src + l);
+		++i;
 	}
-	else
-	{
-		for (o = 0; *(src + o) != '\0'; ++o)
-		{
-			*(dest + i) = *(src + o);
-			++i;
-		}
-	}
+	
 	*(dest + (i + 1)) = '\0';
 
 	return (dest);
