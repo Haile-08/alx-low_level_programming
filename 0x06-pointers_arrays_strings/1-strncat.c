@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _strnca - string concat
+ * _strncat - string concat
  * @dest: destination of output
  * @src: source input
  * @n: n bytes from src
  *
- * Description: concatenates two strings
+ * Description: function that concatenates two strings
  *
  * Return: pointer to dest
  */
