@@ -14,24 +14,20 @@
 
 int _strcmp(char *s1, char *s2)
 {
-	int i1, i2;
+	int i = 0, r;
 
-	for (i1 = 0; *(s1 + i1) != '\0'; ++i1)
-		;
-
-	for (i2 = 0; *(s2 + i2) != '\0'; ++i2)
-		;
-
-	if (i1 > i2)
+	while (s1[i] != '\0' && s2[i] != '\0')
 	{
-		return (15);
+		if (s1[i] != s2[i])
+		{
+			r = s1[i] - s2[i];
+			break;
+		}
+		else
+		{
+			r = s1[i] - s2[i];
+		}
+		i++;
 	}
-	else if (i1 < i2)
-	{
-		return (-15);
-	}
-	else
-	{
-		return (0);
-	}
+	return (r);
 }
