@@ -6,7 +6,8 @@
  *
  * Description: returns the factorial of a given number
  *
- * Return: the factorial value
+ * Return: the factorial number if n > 0
+ *	, if n < 0 return -1 and 1 if n == 0
  */
 
 int factorial(int n)
