@@ -1,10 +1,10 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
- * main - Entry check alx code
+ * main - Entry point
  *
- * Return: Always 0 (success)
-*/
+ * Return: 0
+ */
 
 int main(void)
 {
