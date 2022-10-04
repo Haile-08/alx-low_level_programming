@@ -1,0 +1,43 @@
+#include "main.h"
+#include <limits.h>
+
+/**
+ * _strdup - string duplicate
+ * @str: array of character input
+ *
+ * Description: returns a pointer to a newly allocated space in memory
+ *
+ * Return: Null if str = Null else return the pointer to the array
+ */
+
+char *_strdup(char *str)
+{
+	int size = 0;
+	int i;
+	char *ma;
+
+	while (*(str + size) != '\0')
+	{
+		++size;
+	}
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	else
+	{
+		ma = malloc(sizeof(char) * size);
+		i = 0;
+		while (i < size)
+		{
+			if (ma == NULL)
+			{
+				printf("Can't allocate %d bytes (after %d calls)\n", CHAR_MAX, i);
+				return (NULL);
+			}
+			ma[i] = str[i];
+			++i;
+		}
+		return (ma);
+	}
+}
