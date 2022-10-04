@@ -28,12 +28,12 @@ char *_strdup(char *str)
 	{
 		ma = malloc((sizeof(char) * size) + 1);
 		i = 0;
+		if (ma == NULL)
+		{
+			return (NULL);
+		}
 		while (i < size)
 		{
-			if (ma == NULL)
-			{
-				return (NULL);
-			}
 			ma[i] = str[i];
 			++i;
 		}
