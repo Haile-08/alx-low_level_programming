@@ -32,7 +32,6 @@ char *_strdup(char *str)
 		{
 			if (ma == NULL)
 			{
-				printf("Can't allocate %d bytes (after %d calls)\n", CHAR_MAX, i);
 				return (NULL);
 			}
 			ma[i] = str[i];
