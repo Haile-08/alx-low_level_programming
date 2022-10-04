@@ -26,15 +26,10 @@ char *_strdup(char *str)
 	}
 	else
 	{
-		ma = malloc(sizeof(char) * size);
+		ma = malloc((sizeof(char) * size) + 1);
 		i = 0;
 		while (i < size)
 		{
-			if (ma == NULL)
-			{
-				printf("Can't allocate %d bytes (after %d calls)\n", CHAR_MAX, i);
-				return (NULL);
-			}
 			ma[i] = str[i];
 			++i;
 		}
