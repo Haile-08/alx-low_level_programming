@@ -12,6 +12,7 @@
 void print_dog(struct dog *d)
 {
 	char n[6] = "(nil)";
+
 	if (d != NULL)
 	{
 		printf("Name: %s\n", (d->name == NULL) ? n : d->name);
