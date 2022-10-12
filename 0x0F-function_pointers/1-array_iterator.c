@@ -6,7 +6,8 @@
  * @action: pointer to the function
  * @array: input array
  *
- * Description: executes a function given as a parameter on each element of an array.
+ * Description: executes a function given as a
+ *		parameter on each element of an array.
  *
  * Return: none
  */
@@ -15,7 +16,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	if (array && size && action)
 	{
-		long unsigned int i = 0;
+		unsigned long int i = 0;
 
 		while (i < size)
 		{
