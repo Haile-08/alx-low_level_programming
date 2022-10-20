@@ -21,7 +21,7 @@ typedef struct list_s
 	struct list_s *next;
 } list_s;
 
-typedef long unsigned int size_t;
+typedef unsigned long int size_t;
 typedef struct list_s list_t;
 
 size_t print_list(const list_t *h);
