@@ -1,9 +1,13 @@
-#ifndef _MAIN_H_
-#define _MIAN_H_
+#ifndef _MAIN_H
+#define _MAIN_H
 
+#include <stddef.h>
 #include <stdio.h>
-#include <stdlib.h>
+
+#ifdef DEBUG
+#endif
 
 unsigned int binary_to_uint(const char *b);
+
 
 #endif
