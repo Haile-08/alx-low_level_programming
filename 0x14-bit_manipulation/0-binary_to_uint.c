@@ -46,23 +46,13 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-	#ifdef DEBUG
-	printf("String is %s, and length is %u.\n", b, _strlen(b));
-	#endif
-
 	for (index = _strlen(b) - 1; index >= 0; index--)
 	{
 		num = _atoi(b[index]);
-		#ifdef DEBUG
-		printf("Number is %u, index is %i and base is %u.\n\n", num, index, base2);
-		#endif
 		if (num != 0 && num != 1)
 			return (0);
 		result += num * base2;
 		base2 *= 2;
-		#ifdef DEBUG
-		printf("Result is %u.\n", result);
-		#endif
 	}
 	return (result);
 }
