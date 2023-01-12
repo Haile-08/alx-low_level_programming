@@ -15,33 +15,44 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *node;
+	hash_node_t *new;
 	hash_node_t *tmp;
-	unsigned long int index;
+	unsigned long int i;
 
-	if (ht == NULL ||  key == NULL || *key == '\0' || value == NULL)
+	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
 
-	/* find the index of using the hash table */
-	index = key_index((const unsigned char *)key, ht->size);
-	tmp = ht->array[index];
+	/* Find the index */
+	i = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->array[i];
 
-	/* Create a new node */
-	node = malloc(sizeof(hash_node_t));
-	if (node == NULL)
+	/* create node */
+	new = malloc(sizeof(hash_node_t));
+	if (new == NULL)
 		return (0);
-	node->key = strdup(key);
-	node->value = strdup(value);
-	node->next = NULL;
+	new->value = strdup(value);
+	new->key = strdup(key);
 
-	/* Insert in open or handle collision */
-	if (tmp == NULL)
-		tmp = node;
+	/* check if hash table at index is empty */
+	if (ht->array[i] == NULL)
+	{
+		ht->array[i] = new;
+		return (1);
+	}
 	else
 	{
 		while (tmp)
+		{
+			if (strcmp(tmp->key, key) == 0)
+			{
+				tmp->value = strdup(value);
+				return (1);
+			}
 			tmp = tmp->next;
-		node->next = tmp;
+		}
+		tmp->next = new;
+		new->next = NULL;
 	}
 	return (1);
+
 }
