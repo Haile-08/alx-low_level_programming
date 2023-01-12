@@ -17,11 +17,8 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	char *comma = "";
 
-	if (ht == NULL)
-	{
-		printf("{}\n");
+	if (ht == NULL || ht->array == NULL)
 		return;
-	}
 
 	printf("{");
 	i = 0;
